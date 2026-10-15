@@ -57,3 +57,14 @@ Buka http://localhost:3000. Membuka `index.html` langsung juga bisa, tapi mode o
 - Leaderboard game browser **tidak bisa 100% anti-cheat**. Jangan jadikan hadiah token/uang
   berdasarkan leaderboard ini tanpa verifikasi tambahan.
 - Jangan pakai logo/nama Nvidia di aset. Disclaimer di footer jangan dihapus.
+
+## Connect wallet (read-only)
+
+Tombol "connect wallet" di pojok kanan atas. Yang dilakukan:
+- hanya meminta izin melihat alamat (`eth_requestAccounts`), **tidak pernah** minta sign, approve, atau kirim transaksi
+- membaca saldo $FLOPGOD dari RPC publik Robinhood Chain (chain ID 4663), jadi wallet tidak harus sedang di jaringan itu
+- menampilkan rank holder (atur di `ranks` di `js/config.js`)
+- tombol "add Robinhood Chain" untuk menambahkan jaringan ke wallet
+
+Saldo dan rank baru aktif setelah `contractAddress` diisi. Sebelum itu tampil "soon™".
+Catatan: RPC publik Robinhood dibatasi (rate-limited). Kalau pengunjung ramai, ganti `chain.rpcUrl` dengan RPC berbayar (mis. Dwellir, QuickNode).

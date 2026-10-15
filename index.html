@@ -39,7 +39,40 @@
       <a href="#lore">lore</a>
       <a href="#buy">buy</a>
     </nav>
+    <button type="button" class="wallet-btn" id="walletBtn">connect wallet</button>
   </header>
+
+  <!-- wallet picker / status. read only: we never ask to sign or send anything -->
+  <div class="wallet-panel box" id="walletPanel" role="dialog" aria-modal="false" aria-labelledby="walletTitle" hidden>
+    <div class="wp-head">
+      <h3 id="walletTitle">your wallet</h3>
+      <button type="button" class="wp-close" id="walletClose" aria-label="close">✕</button>
+    </div>
+
+    <div id="wpPick">
+      <p class="wp-note">pick a wallet. we only read your address and balance. we will <b>never</b> ask you to sign or send anything.</p>
+      <div class="wp-list" id="wpList"></div>
+      <div class="wp-empty" id="wpEmpty" hidden>
+        <p>no wallet found in this browser.</p>
+        <p>on your phone, open this site inside your wallet app's browser (MetaMask, Rabby, Coinbase Wallet, OKX...).</p>
+        <a class="btn btn-green" id="mmDeepLink" href="#" target="_blank" rel="noopener">open in MetaMask</a>
+      </div>
+    </div>
+
+    <div id="wpConnected" hidden>
+      <div class="wp-addr"><span class="dot"></span><code id="wpAddr">0x…</code></div>
+      <div class="holder-card" id="holderCard">
+        <span class="hc-label">your $FLOPGOD</span>
+        <b class="hc-bal" id="hcBal">…</b>
+        <span class="hc-rank" id="hcRank">checking the scriptures…</span>
+      </div>
+      <div class="wp-actions">
+        <button type="button" class="btn btn-pink" id="addChainBtn">add Robinhood Chain</button>
+        <a class="btn btn-green" id="wpExplorer" href="#" target="_blank" rel="noopener">view on explorer</a>
+      </div>
+      <button type="button" class="wp-link" id="walletDisconnect">disconnect</button>
+    </div>
+  </div>
 
   <main>
     <section class="hero">
@@ -151,5 +184,6 @@
   <script src="js/api.js"></script>
   <script src="js/main.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/wallet.js"></script>
 </body>
 </html>
