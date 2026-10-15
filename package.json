@@ -1,0 +1,13 @@
+{
+  "name": "flopgod-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "$FLOPGOD landing page with prayer counter, mini game and leaderboard",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

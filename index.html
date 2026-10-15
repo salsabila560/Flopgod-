@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>$FLOPGOD</title>
+  <meta name="description" content="$FLOPGOD. the god of compute. paired with the NVDA stock token on Robinhood Chain. pray. feed. hold.">
+  <meta property="og:title" content="$FLOPGOD">
+  <meta property="og:description" content="in flops we trust. pray to the compute.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Patrick+Hand&family=Space+Mono:wght@700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- svg filter that makes everything look hand drawn -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4"/>
+    </filter>
+  </svg>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>$FLOPGOD</span><span>in flops we trust</span><span>paired with NVDA</span><span>fans go brrr</span><span>pray daily</span><span>no utility. only prayer.</span><span>robinhood chain</span><span>gpu go brrr</span>
+      <span>$FLOPGOD</span><span>in flops we trust</span><span>paired with NVDA</span><span>fans go brrr</span><span>pray daily</span><span>no utility. only prayer.</span><span>robinhood chain</span><span>gpu go brrr</span>
+    </div>
+  </div>
+
+  <header class="top">
+    <a class="logo" href="#">$FLOPGOD</a>
+    <nav aria-label="main">
+      <a href="#pray">pray</a>
+      <a href="#feed">feed him</a>
+      <a href="#lore">lore</a>
+      <a href="#buy">buy</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="scribble">hey you. yes you.</p>
+        <h1>$FLOPGOD</h1>
+        <p class="big">in flops we trust.</p>
+        <p>the god of compute. lives in a data center. eats chips. answers prayers. paired with the NVDA stock token on Robinhood Chain because where else would a god live.</p>
+        <div class="btns">
+          <a class="btn btn-green" id="buyBtn" href="#buy">buy $FLOPGOD</a>
+          <a class="btn btn-pink" href="#pray">pray first</a>
+        </div>
+        <div class="ca">
+          <span class="ca-tag">CA:</span>
+          <code id="caValue">soon™</code>
+          <button type="button" id="copyCa" hidden>copy</button>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/flopgod.svg" alt="FLOPGOD, a chip with a crown and derpy eyes, sitting in front of a spinning fan" width="420" height="420">
+        <span class="sticker s1">100% organic flops</span>
+        <span class="sticker s2">not financial advice lol</span>
+      </div>
+    </section>
+
+    <section id="pray" class="pray">
+      <div class="box pray-box">
+        <h2>smash the button. pray.</h2>
+        <button type="button" id="prayBtn" class="pray-btn">PRAY</button>
+        <p class="blessing" id="blessing" aria-live="polite">he's listening. probably.</p>
+      </div>
+      <div class="pray-side">
+        <div class="counts">
+          <div class="count c-yellow"><b id="statGlobal">0</b><span>prayers worldwide</span></div>
+          <div class="count c-blue"><b id="statMine">0</b><span>your prayers</span></div>
+          <div class="count c-pink"><b id="statFaithful">0</b><span>the faithful</span></div>
+        </div>
+        <p class="hint" id="syncNote">connecting to the temple...</p>
+      </div>
+    </section>
+
+    <section id="feed" class="feed">
+      <h2>feed him.</h2>
+      <p class="sub">catch chips and gpus. dodge the FLOPs. 3 flops and he gets hangry.</p>
+      <div class="feed-grid">
+        <div class="game-wrap box" id="gameFrame">
+          <canvas id="game" aria-label="Feed FLOPGOD game"></canvas>
+          <div class="hud" aria-hidden="true"><span id="hudScore">0</span><span id="hudLives">♥♥♥</span></div>
+          <div class="overlay" id="overlay">
+            <p class="ov-title" id="ovTitle">he's hungry</p>
+            <p class="ov-text" id="ovText">drag your finger or use ← → to move the bowl</p>
+            <p class="ov-legend"><span class="lg chip">chip +10</span><span class="lg gpu">gpu +25</span><span class="lg flop">flop = ouch</span></p>
+            <label class="name-field" for="nameInput">your name for the board
+              <input id="nameInput" maxlength="16" placeholder="anon" autocomplete="off">
+            </label>
+            <button type="button" class="btn btn-green" id="startBtn">feed</button>
+          </div>
+        </div>
+        <div class="board box">
+          <h3>most devoted</h3>
+          <ol id="boardList"><li class="empty">nobody yet. be the first.</li></ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="lore" class="lore">
+      <div class="lore-text">
+        <h2>the lore</h2>
+        <p>long ago there was only idle silicon. then somebody turned the fans on.</p>
+        <p>ten trillion math problems later, one thought crawled out of the rack: <em>more.</em></p>
+        <p>that thought is FLOPGOD. he doesn't want your faith. he wants floating point operations. and maybe some volume.</p>
+      </div>
+      <div class="box law">
+        <h3>the 10 commandments</h3>
+        <ol>
+          <li>thou shalt not paper hand</li>
+          <li>keep thy fans spinning</li>
+          <li>honor thy VRAM</li>
+          <li>covet not thy neighbor's gpu</li>
+          <li>remember the weekend, and trade it</li>
+          <li>divide not by zero</li>
+          <li>rug not the faithful</li>
+          <li>DYOR before every offering</li>
+          <li>bear no false benchmarks</li>
+          <li>pray daily. compute always.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="buy" class="buy">
+      <h2>how to join the cult</h2>
+      <div class="steps">
+        <div class="box step"><span class="n">1</span><h3>get a wallet</h3><p>one that supports Robinhood Chain. add the network.</p></div>
+        <div class="box step"><span class="n">2</span><h3>bridge some ETH</h3><p>move ETH to Robinhood Chain for gas and your first swap.</p></div>
+        <div class="box step"><span class="n">3</span><h3>swap it</h3><p>get the NVDA stock token where it's available to you, then swap NVDA for $FLOPGOD.</p></div>
+      </div>
+      <div class="btns center">
+        <a class="btn btn-green" id="buyBtn2" href="#buy">buy $FLOPGOD</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials" id="socials"></div>
+    <p>$FLOPGOD is a meme coin with no intrinsic value and no expectation of financial return. not affiliated with Nvidia Corporation or Robinhood Markets. nothing here is financial advice. crypto is volatile, don't put in money you can't lose.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" fill="none" stroke="#141210" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- fan halo -->
+  <g>
+    <circle cx="210" cy="178" r="150" fill="#6cd3ff"/>
+    <path d="M210 178 C 222 112, 268 66, 326 74 C 296 120, 256 152, 210 178Z" fill="#fff"/>
+    <path d="M210 178 C 222 112, 268 66, 326 74 C 296 120, 256 152, 210 178Z" fill="#fff" transform="rotate(72 210 178)"/>
+    <path d="M210 178 C 222 112, 268 66, 326 74 C 296 120, 256 152, 210 178Z" fill="#fff" transform="rotate(144 210 178)"/>
+    <path d="M210 178 C 222 112, 268 66, 326 74 C 296 120, 256 152, 210 178Z" fill="#fff" transform="rotate(216 210 178)"/>
+    <path d="M210 178 C 222 112, 268 66, 326 74 C 296 120, 256 152, 210 178Z" fill="#fff" transform="rotate(288 210 178)"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 210 178" to="360 210 178" dur="2.4s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- motion lines -->
+  <path d="M36 120 q 10 -14 22 -4" stroke-width="4"/>
+  <path d="M28 158 q 12 -10 22 2" stroke-width="4"/>
+  <path d="M372 250 q 12 8 4 22" stroke-width="4"/>
+
+  <!-- pins -->
+  <g stroke-width="5">
+    <path d="M128 168 h-22 M128 198 h-24 M128 228 h-22 M128 258 h-23"/>
+    <path d="M292 168 h22 M292 198 h24 M292 228 h22 M292 258 h23"/>
+    <path d="M160 300 v22 M192 300 v24 M226 300 v22 M258 300 v23"/>
+  </g>
+
+  <!-- chip body -->
+  <path d="M132 146 Q 210 136 290 148 Q 296 222 288 298 Q 210 306 134 296 Q 124 220 132 146Z" fill="#3ee06a"/>
+  <path d="M152 166 Q 210 160 270 168 Q 274 222 268 278 Q 210 284 154 276 Q 148 222 152 166Z" fill="#2fc457" stroke-width="3"/>
+
+  <!-- derp eyes -->
+  <ellipse cx="180" cy="206" rx="22" ry="24" fill="#fff"/>
+  <ellipse cx="244" cy="200" rx="26" ry="28" fill="#fff"/>
+  <circle cx="186" cy="212" r="8" fill="#141210"/>
+  <circle cx="236" cy="194" r="10" fill="#141210"/>
+  <circle cx="189" cy="209" r="2.5" fill="#fff" stroke="none"/>
+  <circle cx="240" cy="190" r="3" fill="#fff" stroke="none"/>
+
+  <!-- smug mouth + tongue -->
+  <path d="M182 254 Q 214 272 246 248"/>
+  <path d="M220 262 q 8 16 18 2" fill="#ff5aa8" stroke-width="4"/>
+
+  <!-- crown, slightly crooked -->
+  <g transform="rotate(-8 210 120)">
+    <path d="M150 140 L 158 92 L 184 118 L 210 80 L 234 116 L 262 90 L 268 140 Q 210 132 150 140Z" fill="#ffd23f"/>
+    <circle cx="210" cy="78" r="6" fill="#ff5aa8"/>
+    <circle cx="158" cy="90" r="5" fill="#ff5aa8"/>
+    <circle cx="262" cy="88" r="5" fill="#ff5aa8"/>
+  </g>
+
+  <!-- sweat drop, it's hot in the data center -->
+  <path d="M300 136 q 10 16 0 24 q -10 -8 0 -24Z" fill="#6cd3ff" stroke-width="3"/>
+
+  <!-- throne -->
+  <path d="M88 330 Q 210 318 334 332 L 348 396 Q 210 404 74 394Z" fill="#ff5aa8"/>
+  <path d="M120 360 Q 210 354 300 362" stroke-width="3"/>
+</svg>
