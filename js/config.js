@@ -1,6 +1,6 @@
 // fill these in when the token goes live. leave empty to show "soon".
 window.FLOPGOD_CONFIG = {
-  contractAddress: "",   // "0x..."  (also turns on the wallet balance + holder rank)
+  contractAddress: "0x67a8c1947f49573876d5897ecffc0351e370be4d",
   buyUrl: "",            // swap link on your launchpad / dex
   xUrl: "https://x.com/flopgod_rh",
   telegramUrl: "",       // https://t.me/yourgroup
