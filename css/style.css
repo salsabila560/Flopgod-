@@ -264,3 +264,17 @@ footer { padding-block: 40px 56px; border-top: 3px dashed var(--ink); font-size:
 .wp-actions { display: grid; gap: 10px; }
 .wp-actions .btn { font-size: 18px; text-align: center; padding: 10px 16px; }
 .wp-link { background: none; border: 0; text-decoration: underline; color: var(--muted); font-size: 17px; margin-top: 12px; padding: 0; }
+
+/* x handle + site name */
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 16px; }
+.link-x {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--f-mono); font-size: 15px; text-decoration: none;
+  background: var(--ink); color: var(--paper);
+  padding: 7px 14px; border-radius: var(--wobbly-2);
+  transform: rotate(-1.5deg); box-shadow: 3px 3px 0 var(--pink);
+}
+.link-x:hover { transform: rotate(0deg) translateY(-1px); }
+.link-site { font-family: var(--f-marker); font-size: 20px; transform: rotate(2deg); display: inline-block; }
+.foot-name { font-size: 20px; color: var(--ink); }
+.foot-name a { color: var(--ink); }

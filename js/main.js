@@ -39,7 +39,7 @@
       );
     });
   }
-  const socials = [["X", CFG.xUrl], ["Telegram", CFG.telegramUrl]].filter((s) => s[1]);
+  const socials = [["follow on X", CFG.xUrl], ["Telegram", CFG.telegramUrl]].filter((s) => s[1]);
   socials.forEach(([name, url]) => {
     const a = document.createElement("a");
     a.className = "btn btn-pink"; a.href = url; a.target = "_blank"; a.rel = "noopener"; a.textContent = name;
